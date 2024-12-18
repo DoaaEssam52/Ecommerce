@@ -1,8 +1,35 @@
 <div class="py-5 container">
+  <div class="row mb-5 justify-content-between mx-0">
+    <div class="col-lg-6 px-0">
+      <input
+        class="form-control"
+        placeholder="Search by title ..."
+        [(ngModel)]="title"
+      />
+    </div>
+
+    <div class="col-lg-6 row justify-content-end">
+      <button
+        mat-flat-button
+        class="col-lg-3 btn-primary"
+        (click)="submitFilter()"
+      >
+        Filter
+      </button>
+      <button
+        mat-stroked-button
+        class="col-lg-3 px-0 mx-3 btn-outline-primary"
+        (click)="resetFilter()"
+      >
+        Reset
+      </button>
+    </div>
+  </div>
+
   <div class="row">
     <app-card
       class="col-md-6 col-lg-4"
-      *ngFor="let product of productsList"
+      *ngFor="let product of filteredProducts"
       [product]="product"
     ></app-card>
   </div>
