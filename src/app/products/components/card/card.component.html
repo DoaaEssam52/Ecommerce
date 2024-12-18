@@ -1,1 +1,15 @@
-<p>card works!</p>
+<mat-card>
+  <mat-card-title
+    (click)="viewDetails()"
+    class="text-center pt-2"
+    >{{ product.title }}</mat-card-title
+  >
+
+  <mat-card-content align="center">
+    <mat-card-subtitle class="my-1 text-primary"
+      >${{ product.price }}</mat-card-subtitle
+    >
+
+    <label>Add To Cart</label>
+  </mat-card-content>
+</mat-card>
