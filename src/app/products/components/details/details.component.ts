@@ -14,6 +14,8 @@ import { Product } from '../../models/product.model';
   styleUrls: ['./details.component.scss'],
 })
 export class DetailsComponent implements OnDestroy {
+  isLoadingPage: boolean = true;
+
   product!: Product;
 
   routeSubscription!: Subscription;
@@ -34,8 +36,11 @@ export class DetailsComponent implements OnDestroy {
     this.productSubscription = this._products.getProductById(id).subscribe({
       next: (product) => {
         this.product = product;
+        this.isLoadingPage = false;
       },
-      error: (error) => {},
+      error: () => {
+        this.isLoadingPage = false;
+      },
     });
   }
 

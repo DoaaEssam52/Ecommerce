@@ -1,0 +1,40 @@
+.btn-primary {
+  position: relative;
+  color: white !important;
+  background-color: var(--primary-color) !important;
+  border: 1px solid var(--primary-color) !important;
+}
+
+.btn-primary-hover {
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 11px rgba(#f66e5e, 0.35);
+  }
+}
+
+.btn-outline-primary {
+  color: var(--primary-color) !important;
+  background-color: transparent !important;
+  border: 2px solid var(--primary-color) !important;
+
+  transition: all 0.5s !important;
+
+  &:hover {
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+  }
+}
+
+.btn-rounded-x {
+  border-radius: 30px !important;
+}
+
+.btn {
+  font-weight: 700 !important;
+}
+
+.btn-lg {
+  font-size: 18px !important;
+}

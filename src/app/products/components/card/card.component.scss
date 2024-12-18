@@ -1,0 +1,16 @@
+.product {
+  background-color: transparent !important;
+
+  box-shadow: none !important;
+
+  cursor: pointer;
+
+  mat-card-subtitle {
+    font-family: Quicksand-SemiBold;
+    font-weight: 500;
+  }
+
+  mat-card-title {
+    font-size: 17px !important;
+  }
+}

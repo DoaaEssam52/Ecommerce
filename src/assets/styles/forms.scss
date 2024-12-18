@@ -1,0 +1,29 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+}
+
+.not-outline-form {
+  .mat-mdc-form-field {
+    height: 40px !important;
+  }
+
+  .mat-mdc-text-field-wrapper {
+    height: 40px !important;
+  }
+
+  .mat-mdc-form-field-flex {
+    margin-top: -7px !important;
+  }
+
+  .mat-mdc-form-field-error {
+    font-size: 14px !important;
+    margin-top: 2px !important;
+  }
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: transparent !important;
+}
